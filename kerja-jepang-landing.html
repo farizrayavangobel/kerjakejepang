@@ -842,6 +842,8 @@
     top: -30px;
     color: rgba(255,255,255,0.03);
     line-height: 1;
+    pointer-events: none;
+    z-index: 0;
   }
 
   .price-row {
@@ -850,6 +852,8 @@
     justify-content: center;
     gap: 16px;
     margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
   }
 
   .price-final {
@@ -889,6 +893,8 @@
     cursor: pointer;
     width: 100%;
     justify-content: center;
+    position: relative;
+    z-index: 10;
   }
 
   .btn-big:hover {
@@ -913,6 +919,8 @@
     gap: 10px;
     margin-bottom: 32px;
     text-align: left;
+    position: relative;
+    z-index: 1;
   }
 
   .includes-item {
@@ -1466,7 +1474,7 @@
       <a href="http://lynk.id/tamplates.lab/66e36eek8mrz/checkout" target="_blank" rel="noopener" class="btn-big">
         🛒 Beli Sekarang — Rp 99.000
       </a>
-      <div class="guarantee-row">
+      <div class="guarantee-row" style="position:relative;z-index:10;">
         🔒 Pembayaran aman • ✅ Akses selamanya
       </div>
     </div>
