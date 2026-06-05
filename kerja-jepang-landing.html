@@ -1002,18 +1002,238 @@
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    section { padding: 70px 32px; }
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 80px 32px 48px; }
-    .hero-right { padding: 0 32px 80px; }
-    .book-cover { width: 220px; height: 300px; }
-    .stats-bar { padding: 24px 32px; gap: 32px; }
-    .pain-grid, .chapters-header, .faq-grid, .bonus-grid { grid-template-columns: 1fr; gap: 32px; }
-    .chapters-grid { grid-template-columns: 1fr 1fr; }
-    .testi-grid { grid-template-columns: 1fr; }
-    .cta-section { padding: 80px 32px; }
-    footer { padding: 32px; }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — LARGE DESKTOP (1400px+)
+  ═══════════════════════════════════════ */
+  @media (min-width: 1400px) {
+    section { padding: 120px 120px; }
+    .hero-left { padding: 100px 80px 100px 120px; }
+    .hero-right { padding: 80px 120px 80px 60px; }
+    .cover-img { width: 260px; }
+    .cover-front .cover-img { width: 280px; }
+    .chapters-grid { grid-template-columns: repeat(4, 1fr); }
+    .stats-bar { padding: 32px 120px; gap: 80px; }
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — DESKTOP / LAPTOP (1024px – 1399px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 1280px) {
+    .hero-left { padding: 70px 40px 70px 60px; }
+    .cover-img { width: 200px; }
+    .cover-front .cover-img { width: 220px; }
+    .chapters-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-title { font-size: clamp(28px, 3.5vw, 48px); }
+  }
+
+  @media (max-width: 1100px) {
+    .hero { grid-template-columns: 1.1fr 0.9fr; }
+    .chapters-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-left { padding: 60px 32px 60px 48px; }
+    .stats-bar { gap: 40px; padding: 24px 48px; }
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — TABLET LANDSCAPE (769px – 1023px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    section { padding: 80px 48px; }
+
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      min-height: auto;
+    }
+    .hero-left { padding: 64px 32px 64px 48px; }
+    .hero-right { padding: 48px 32px; }
+
+    .hero-title { font-size: clamp(26px, 3vw, 40px); }
+    .hero-subtitle-jp { font-size: 15px; }
+    .hero-desc { font-size: 14px; max-width: 340px; }
+
+    .covers-wrap { gap: 0; }
+    .cover-img { width: 170px; }
+    .cover-front .cover-img { width: 190px; }
+
+    .stats-bar { padding: 22px 32px; gap: 28px; flex-wrap: wrap; }
+    .stat-number { font-size: 26px; }
+    .stat-divider { display: none; }
+
+    .chapters-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .chapter-card { padding: 22px; }
+    .chapter-num { font-size: 32px; }
+
+    .pain-grid { grid-template-columns: 1fr; gap: 40px; }
+    .chapters-header { grid-template-columns: 1fr; gap: 24px; }
+    .faq-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .bonus-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .cta-section { padding: 80px 48px; }
+    .cta-price-box { padding: 36px; }
+    .price-final { font-size: 42px; }
+
+    footer { padding: 32px 48px; }
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — TABLET PORTRAIT (481px – 768px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 768px) {
+    section { padding: 64px 24px; }
+
+    /* Hero: stack vertically */
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-bg-kanji { font-size: 280px; right: -40px; top: -40px; }
+    .hero-left {
+      padding: 72px 24px 40px;
+      text-align: center;
+      align-items: center;
+    }
+    .hero-title { font-size: clamp(24px, 6vw, 36px); text-align: center; }
+    .hero-subtitle-jp { font-size: 13px; letter-spacing: 3px; }
+    .hero-desc { font-size: 14px; max-width: 100%; text-align: center; }
+    .badge { margin: 0 auto 28px; }
+    .hero-cta { flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+    .btn-primary { width: 100%; justify-content: center; padding: 16px 24px; font-size: 13px; }
+    .btn-secondary { font-size: 13px; }
+    .price-tag { justify-content: center; }
+    .price-now { font-size: 30px; }
+
+    .hero-right {
+      padding: 0 24px 64px;
+      justify-content: center;
+    }
+    .covers-wrap { justify-content: center; gap: 0; }
+    .cover-img { width: 140px; }
+    .cover-front .cover-img { width: 158px; }
+    .cover-front { transform: perspective(700px) rotateY(5deg) translateX(-8px); }
+    .cover-back { transform: perspective(700px) rotateY(-8deg) translateX(8px) scale(0.9); }
+
+    /* Stats */
+    .stats-bar { padding: 20px 24px; gap: 20px; justify-content: space-around; }
+    .stat-number { font-size: 22px; }
+    .stat-label { font-size: 10px; }
+    .stat-divider { display: none; }
+
+    /* Sections */
+    .section-tag { font-size: 10px; }
+    .section-title { font-size: clamp(22px, 5vw, 32px); }
+    .section-desc { font-size: 14px; }
+
+    /* Pain */
+    .pain-grid { grid-template-columns: 1fr; gap: 32px; }
+    .pain-solution { padding: 32px 24px; }
+    .pain-solution h3 { font-size: 20px; }
+
+    /* Chapters */
+    .chapters-header { grid-template-columns: 1fr; gap: 20px; }
+    .chapters-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .chapter-card { padding: 18px 16px; }
+    .chapter-num { font-size: 28px; margin-bottom: 8px; }
+    .chapter-title { font-size: 13px; }
+    .chapter-desc { font-size: 12px; }
+    .chapter-tag { font-size: 10px; padding: 3px 8px; margin-top: 10px; }
+
+    /* Bonus */
+    .bonus-grid { grid-template-columns: 1fr; gap: 14px; }
+    .bonus-card { padding: 20px; }
+    .bonus-emoji { font-size: 26px; }
+
+    /* FAQ */
+    .faq-grid { grid-template-columns: 1fr; gap: 12px; }
+    .faq-item { padding: 20px; }
+    .faq-q { font-size: 14px; }
+    .faq-a { font-size: 13px; }
+
+    /* CTA */
+    .cta-section { padding: 64px 24px; }
+    .cta-title { font-size: clamp(24px, 6vw, 36px); }
+    .cta-desc { font-size: 14px; }
+    .cta-price-box { padding: 28px 20px; border-radius: 14px; }
+    .price-final { font-size: 36px; }
+    .price-strike { font-size: 18px; }
+    .price-note { font-size: 12px; }
+    .btn-big { font-size: 14px; padding: 18px 24px; border-radius: 6px; }
+    .includes-item { font-size: 13px; }
+    .guarantee-row { font-size: 12px; flex-wrap: wrap; justify-content: center; }
+
+    footer { padding: 28px 24px; font-size: 12px; }
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — MOBILE (max 480px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 480px) {
+    section { padding: 52px 16px; }
+
+    .hero-left { padding: 64px 16px 32px; }
+    .hero-right { padding: 0 16px 52px; }
+
+    .hero-bg-kanji { font-size: 200px; opacity: 0.6; }
+    .hero-title { font-size: clamp(20px, 7vw, 30px); }
+    .hero-desc { font-size: 13px; }
+    .badge { font-size: 10px; padding: 6px 12px; }
+    .price-now { font-size: 26px; }
+    .price-was { font-size: 14px; }
+
+    .covers-wrap { gap: 0; }
+    .cover-img { width: 118px; }
+    .cover-front .cover-img { width: 132px; }
+    .cover-front { transform: perspective(600px) rotateY(4deg) translateX(-6px); }
+    .cover-back { transform: perspective(600px) rotateY(-6deg) translateX(6px) scale(0.88); }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 16px;
+      gap: 16px;
+      text-align: center;
+    }
+    .stat-item { padding: 12px 8px; background: rgba(0,0,0,0.03); border-radius: 8px; }
+    .stat-number { font-size: 20px; }
+    .stat-label { font-size: 9px; }
+
+    .section-title { font-size: clamp(18px, 6vw, 26px); }
+
+    .chapters-grid { grid-template-columns: 1fr; gap: 12px; }
+    .chapter-card { padding: 16px 14px; }
+    .chapter-num { font-size: 24px; }
+
+    .pain-item { padding: 14px; gap: 12px; }
+    .pain-icon { font-size: 18px; }
+    .pain-text { font-size: 13px; }
+
+    .bonus-card { flex-direction: column; gap: 10px; padding: 18px 14px; }
+
+    .cta-section { padding: 52px 16px; }
+    .cta-price-box { padding: 22px 16px; }
+    .price-final { font-size: 30px; }
+    .btn-big { font-size: 13px; padding: 16px 16px; }
+    .includes-item { font-size: 12px; gap: 8px; }
+
+    .faq-item { padding: 16px 14px; }
+    .faq-q { font-size: 13px; }
+    .faq-a { font-size: 12px; }
+
+    footer { padding: 24px 16px; font-size: 11px; }
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — SMALL MOBILE (max 360px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 360px) {
+    .hero-title { font-size: 18px; }
+    .covers-wrap { transform: scale(0.92); transform-origin: center; }
+    .cover-img { width: 106px; }
+    .cover-front .cover-img { width: 118px; }
+    .price-final { font-size: 26px; }
+    .btn-big { font-size: 12px; }
+    .stat-number { font-size: 17px; }
+    .chapter-num { font-size: 20px; }
+    .section-title { font-size: 17px; }
   }
 </style>
 </head>
@@ -1286,9 +1506,9 @@
 <footer>
   <p style="margin-bottom:8px;">© 2026 Kerja ke Jepang Jalur Mandiri. Semua hak dilindungi.</p>
   <p>
-    <a href="http://lynk.id/tamplates.lab/66e36eek8mrz/checkout" target="_blank" rel="noopener">Syarat & Ketentuan</a> · 
-    <a href="http://lynk.id/tamplates.lab/66e36eek8mrz/checkout" target="_blank" rel="noopener">Kebijakan Privasi</a> · 
-    <a href="http://lynk.id/tamplates.lab/66e36eek8mrz/checkout" target="_blank" rel="noopener">Kontak</a>
+    <a href="#">Syarat & Ketentuan</a> · 
+    <a href="#">Kebijakan Privasi</a> · 
+    <a href="#">Kontak</a>
   </p>
 </footer>
 

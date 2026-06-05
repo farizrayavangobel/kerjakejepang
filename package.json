@@ -1,7 +1,7 @@
 {
   "name": "kerja-ke-jepang-landing-page",
   "version": "1.0.0",
-  "description": "Landing page server untuk e-book Kerja ke Jepang Jalur Mandiri",
+  "description": "Landing page server untuk e-book Kerja ke Jepang Jalur Mandiri oleh Fariz Raya Van Gobel",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -18,6 +18,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "keywords": ["landing-page", "ebook", "jepang", "jalur-mandiri"],
   "author": "Fariz Raya Van Gobel",
   "license": "ISC"
 }
